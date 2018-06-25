@@ -1,0 +1,61 @@
+<import src="../../templates/common-list.wxml" />
+<!--pages/card/card.wxml-->
+<!-- 幻灯 -->
+<swiper indicator-dots="{{true}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner-box swiper-box ">
+      <block wx:for="{{banner}}" wx:key="banner">
+       
+          <swiper-item>
+            <image src="{{item.pic}}" data-src="{{item.link}}" class="slide-image"  bindtap="previewImage" />
+          </swiper-item>
+        
+      </block>
+</swiper>
+
+
+<!--信息列表-->
+<view wx:if="{{item == null}}">
+<dl class="menu">
+    <!--头部样式-->
+    <view class="second">        
+        <input type="text" class="sousuo" bindinput="select" value="{{values}}"  focus="{{focus}}" placeholder="人名/公司名/动态等" />
+       <image src="../../image/sousuo.png" class="img" bindtap="tapQuXiao"></image>
+    </view>
+    <view class='opitem'>
+      <view><picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="weui-input">{{array[index]}}</view>
+            </picker></view>
+      <view><picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+              <view class="weui-input">{{array1[index1]}}</view>
+            </picker></view>
+      <view><picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+              <view class="weui-input">{{array2[index2]}}</view>
+            </picker></view>   
+    </view>
+
+    <!--用户信息列表-->
+    <view class="conlist">
+    <view class="container">
+     <!-- 加载图文列表 -->
+        <view class="index-container">
+            
+            <template is="tempCommonList" data="{{postsList}}" />
+            
+            <view class="loadingmore"  hidden="{{!endpage}}">
+            <!-- 
+                <view hidden="{{isLastPage}}">
+                    <button class="more-button" formType="submit" size="mini" bindtap="loadMore">加载更多...</button>
+                </view>-->
+                <view class="no-more" hidden="{{!endpage}}">---无更多信息---</view>
+            </view>
+        </view>
+    </view>
+    </view>
+</dl>
+</view>
+<view wx:else>
+    <view class="container1">
+        <image src="../../image/list.png" class="list"></image>
+        <view class="lists">查看名片时,点击收藏可放入名片夹.....</view>
+    </view>
+</view>
+

@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <!--头部开始-->
+  <view class="card-top" style='background:{{skinval =="color" ? skinvalue : "url("+skinvalue+")"}}'>
+    <view>
+      <image src="{{userDetail.photo}}" class="images"></image>
+    </view>
+    <view class="name">
+      <view>{{userDetail.username}}</view>
+      <view class="position">{{userDetail.position}}</view>
+    </view>
+    <view class="type">公司
+      <view class="nickname">{{userDetail.company}}</view>
+    </view>
+    <view class="type">电话
+      <block wx:if="{{true}}">
+        <view class="phone" id="{{userDetail.phone}}" bindtap="cphone">{{userDetail.phone}}</view>
+        <view>拨号</view>
+      </block>
+    </view>
+    <view class="type">手机
+      <view class="email">{{userDetail.tel}}</view>
+    </view>
+    <view class="type">QQ
+      <view class="email">{{userDetail.qq_id}}</view>
+    </view>
+    <view class="type">微信
+      <view class="email">{{userDetail.wxname}}</view>
+    </view>
+    <view class="type">地址
+      <view class="email">{{userDetail.address}}</view>
+    </view>
+  </view>
+  <view class='index-row2'>
+    <view><image class="in-1" src="../../image/mp/4.png"></image></view>
+    <view>
+    <image class="src" src="../../image/mp/3.png"></image>
+    动态
+      <text class="character">:</text>{{userDetail.dynamic}}</view>      
+    <view>
+    <image class="src" src="../../image/mp/2.png"></image>
+    影响力
+      <text class="character">:</text>{{userDetail.impact}}</view>
+    <view>
+    <image class="src" src="../../image/mp/1.png"></image>
+    点赞
+      <text class="character">:</text>{{userDetail.like}}</view>
+    <view>
+    <image class="src" src="../../image/mp/0.png"></image>
+    收藏
+      <text class="character">:</text>{{userDetail.colle}}</view>
+  </view>
+    <!--中部结束-->
+
+    <!--<view><image src="src"></image>面对面扫名片</view>-->
+    <block  wx:if="{{is_coll == 1}}">      
+        <button bindtap="coll" class="button button-first" >取消收藏</button>     
+    </block>
+    <block  wx:else>
+      <form bindsubmit="coll" report-submit="true">
+        <button class="button button-first" formType="submit">收藏到名片夹</button>
+      </form>
+    </block>
+    <button bindtap="collCard" class="button button-second">打开我的名片</button>
+        <image src="../../image/kefu.png" bindtap="lianxikefu" class="kefu"></image>
+    <text class="lianxi">联系客服</text>
+</view>

@@ -1,0 +1,64 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/member/member",
+    "pages/card/card",
+    "pages/cards/cards",   
+    "pages/dynamic/dynamic",    
+    "pages/replace/replace",    
+    "pages/addCard/addCard",
+    "pages/ucard/ucard",  
+    "pages/logs/logs",
+    "pages/contactUser/contactUser",
+    "pages/resource/resource",
+    "pages/family/family",
+    "pages/detail/detail",
+    "pages/mycolle/mycolle",
+    "pages/skin/skin",
+    "pages/private/private"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#f76f9c",
+    "navigationBarTitleText":"名片夹",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "color":"#8B8888",
+    "selectedColor":"#2EBAEE",
+    "backgroundColor":"#FFFFFF",
+    "borderStyle":"black",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"我的名片",
+      "iconPath":"image/1.png",
+      "selectedIconPath":"image/1.png"
+    },{
+      "pagePath":"pages/cards/cards",
+      "text":"名片夹",
+      "iconPath":"image/2.png",
+      "selectedIconPath":"image/2.png"
+    },
+    {
+      "pagePath": "pages/member/member",
+      "text": "会员中心",
+      "iconPath": "image/3.png",
+      "selectedIconPath": "image/3.png"
+    },
+    {
+      "pagePath": "pages/card/card",
+      "text": "百万曝光",
+      "iconPath": "image/4.png",
+      "selectedIconPath": "image/4.png"
+    },
+    {
+      "pagePath": "pages/family/family",
+      "text": "家族名片",
+      "iconPath": "image/5.png",
+      "selectedIconPath": "image/5.png"
+    }]
+  }
+}

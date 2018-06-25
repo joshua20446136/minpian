@@ -1,0 +1,24 @@
+<template name="tempCommonList">
+
+  <view class="common-list">
+    <block wx:key="id" wx:for="{{postsList}}">
+      <view class="list-item has-img" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+        <view class="content-title">
+          <text decode="{{true}}">{{item.uname}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.position}}</text>
+          <text>{{item.company}}</text>
+        </view>
+        <view class="content-date">
+          <image src="../../image/calendar.png"></image>
+          <text>{{item.like}}</text>
+          <image src="../../image/comments.png"></image>
+            <text class="">{{item.dynamic}}</text>
+            <image src="../../image/pageviews.png"></image>
+            <text class="">{{item.impact}}</text>
+            <image src="../../image/home-like.png"></image>
+            <text class="">{{item.colle}}</text>        
+        </view>
+        <image src="{{item.photo}}" mode="aspectFill" class="cover"></image>
+      </view>
+    </block>
+  </view>  
+</template>

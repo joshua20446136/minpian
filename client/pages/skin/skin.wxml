@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="ordinary">
+    <block wx:key="id" wx:for="{{skincolordata}}" wx:for-index="idx">
+      <view style='background:{{item.val =="color" ? item.value_color : "url("+item.value_color +")"}};' data-idx="{{idx}}"  bindtap='setcolor'>
+      <block wx:if="{{current_idx == idx}}">
+        <image style="width: 60rpx; height: 60rpx;margin-top:60rpx;margin-left:50rpx" src='../../image/150.png'/>
+      </block>
+      </view>
+    </block>
+  </view>
+  <view class="skinvip"></view>
+</view>

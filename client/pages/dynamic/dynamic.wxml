@@ -1,0 +1,48 @@
+<import src="../../templates/common-list.wxml" />
+
+<!-- 幻灯 -->
+<swiper indicator-dots="{{true}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="banner-box swiper-box ">
+      <block wx:for="{{banner}}" wx:key="banner">
+       
+          <swiper-item>
+            <image src="{{item.pic}}" data-src="{{item.link}}" class="slide-image"  bindtap="previewImage" />
+          </swiper-item>
+        
+      </block>
+</swiper>
+
+
+<view class='mydytitle'>我的动态</view>
+<view class="showerror" style="display:{{showerror}}">
+    <image src="../../image/cry80.png" style="height:100rpx;width:100rpx"></image>
+    <view class="errortext">
+        暂时无法访问网络,下拉重试...
+
+    </view>
+</view>
+
+<view class="showerror" style="display:{{wucontent}}">
+    <image src="../../image/cry80.png" style="height:100rpx;width:100rpx"></image>
+    <view class="errortext">
+        暂无内容...
+    </view>
+</view>
+
+<view style="display:{{showallDisplay}}">
+
+    <view class="container">
+     <!-- 加载图文列表 -->
+        <view class="index-container">
+            <template is="tempCommonList" data="{{postsList}}" />
+
+            <view class="loadingmore" style="display:{{floatDisplay}}">
+            <!-- 
+                <view hidden="{{isLastPage}}">
+                    <button class="more-button" formType="submit" size="mini" bindtap="loadMore">加载更多...</button>
+                </view>-->
+                <view class="no-more" hidden="{{!isLastPage}}">---无更多文章---</view>
+            </view>
+            
+        </view>
+    </view>
+</view>

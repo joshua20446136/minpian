@@ -1,0 +1,24 @@
+<!--pages/resource/resource.wxml-->
+<view wx:if="{{items === null}}">
+    <view class="container">
+        <image src="../../image/{{typename}}.png" class="list"></image>
+        <view class="lists">还没有人来看过.....</view>
+    </view>
+</view>
+<view wx:else>
+    <view class="body">
+        <view wx:for="{{items}}">
+            <view class="ctime" style="display:{{show}}">{{item.ctime}}</view>
+            <view class="userdetails">
+                <navigator url="../contactUser/contactUser?gid={{item.id}}">
+                    <image src="{{item.img}}" class="user-src"></image>
+                    <view class="username">{{item.username}}</view>
+                    <view class="company">{{item.company}}</view>
+                </navigator>
+                <view class="phone-src">
+                    <image src="../../image/dianhua.png" id="{{item.phone}}" bindtap="callPhone" class="phones"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

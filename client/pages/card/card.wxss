@@ -1,0 +1,231 @@
+/* pages/card/card.wxss */
+
+swiper{height: 350rpx}
+.slide-image,image{width:750rpx;height: 350rpx}
+
+/*总菜单容器*/
+
+.menu {
+  display: block;
+  /* min-height: 695px; */
+  background-color: #fff;
+  position: relative;
+}
+
+/*一级菜单*/
+
+.menu dt {
+  font-size: 15px;
+  float: left;
+  width: 49.6%;
+  height: 38px;
+  border-right: 0.1px double #efefef;
+  text-align: center;
+  background-color: white;
+  color: black;
+  line-height: 38px;
+}
+
+.menu .top-src {
+  margin-top: 2px;
+  width: 14px;
+  height: 15px;
+}
+
+/*二级菜单外部容器样式*/
+
+.menu dd {
+  position: absolute;
+  width: 100%;
+  top: 39px;
+  left: 0;
+  z-index: 1;
+}
+
+/*二级菜单普通样式*/
+
+.menu li {
+  font-size: 14px;
+  line-height: 34px;
+  height: 34px;
+  padding-left: 13%;
+  background-color: #fff;
+  border-bottom: 1px double #f5f5f5;
+  position: relative;
+}
+
+.sort-see {
+  border-top: 1px double #f5f5f5;
+}
+
+/*二级菜单高亮样式*/
+
+.top-sort {
+  position: absolute;
+  top: 22%;
+  left: 10px;
+  width: 19px;
+  height: 16px;
+}
+
+.bottom-sort {
+  position: absolute;
+  top: 28%;
+  right: 10px;
+  width: 5%;
+  height: 40%;
+}
+
+.second {
+  font-size: 15px;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 28rpx;
+  height: 28rpx;
+  padding: 18rpx;
+  background: #000;
+}
+
+.sousuo {
+  width: 650rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1px solid #ccc;
+}
+
+.opitem {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  height: 60rpx;
+  margin-top: 10rpx;
+}
+
+.opitem view {
+  width: 33%;
+  line-height: 60rpx;
+}
+
+.opitem view picker {
+  margin: 0 20rpx;
+}
+
+.opitem view picker view {
+  width: 100%;
+  border: 1px solid #ccc;
+  line-height: 46rpx;
+}
+
+.seconds {
+  width: 100%;
+  background-color: #fff;
+  min-height: 55px;
+  margin-top: 5px;
+}
+
+.userdetails {
+  margin-top: 2px;
+  display: block;
+  border: 0px double #d0cfd5;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  background-color: white;
+}
+
+.user-src {
+  left: 3%;
+  top: 13.8%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.username {
+  position: absolute;
+  top: 10%;
+  left: 19%;
+  width: 60%;
+  font-weight: bold;
+  height: 25px;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.company {
+  position: absolute;
+  left: 19%;
+  top: 50%;
+  width: 60%;
+  height: 25px;
+  color: #bebebe;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.phones {
+  position: absolute;
+  right: 1%;
+  top: 0;
+  padding: 23px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.statistics {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #a0a4a7;
+  text-align: center;
+}
+
+/* 列表 */
+.common-list .list-item.has-img .content-title text {
+  line-height: 2
+}
+.common-list .list-item.has-img image.cover {
+  width: 145rpx;
+  height:145rpx;
+  border-radius: 10rpx;
+  left:35rpx;
+}
+
+
+/*这是无数据*/
+
+.container1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 412rpx 0;
+  box-sizing: border-box;
+  background-color: #efefef;
+}
+
+.list {
+  width: 40%;
+  height: 150px;
+}
+
+.lists {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #abaab0;
+}

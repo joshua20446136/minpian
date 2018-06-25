@@ -1,0 +1,132 @@
+/* pages/addCard/addCard.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  padding-bottom: 57.5%;
+  box-sizing: border-box;
+  background-color:#EFEFEF;
+  font-weight: normal;
+}
+/*第一部分*/
+.update-top {
+    width:100%;
+    min-height:100px;
+    background-color:white;    
+    border-top:1px double #E2E2E2;
+    border-bottom:1px double #E2E2E2;
+}
+.img{
+    width:80px;
+    height:80px;
+    margin-left:10px;
+    margin-top:10px;
+    float:left;
+}
+.username {
+    border-bottom:1px double #E2E2E2;
+    margin-top:10px;
+    margin-left:100px;
+    width:70%;
+    height:40px;
+    line-height:40px;
+}
+.phone {
+    font-size:17px;
+    margin-left:100px;
+    width:60%;
+    height:39px;
+    line-height:40px;
+}
+.btn {
+    font-size:14px;
+    width:100px;
+    color:#2EBAEE;
+    height:30px;
+    line-height:30px;
+    border:1px double #2EBAEE;
+    position:absolute;
+    right:5px;
+    top:5px;
+    z-index: 9999;
+}
+.check {
+    margin-left:10px;
+    border-top:1px double #E2E2E2;
+    width:93%;
+    height:40px;
+    line-height:40px;
+}
+.check1 {
+    font-size:15px;
+    width:16%;
+    height:30px;
+    line-height:30px;
+    float:left;
+}
+.check2 {
+    font-size:15px;
+    width:80%;
+    height:30px;
+}
+/*第二部分*/
+.update-second {
+    margin-top:15px;
+    width:100%;
+    background-color:white;
+    border-top:1px double #E2E2E2;
+    border-bottom:1px double #E2E2E2;
+}
+.type {
+    margin-left:12px;
+    height:40px;
+    line-height:40px;
+    font-size:17px;
+    border-bottom:1px double #E2E2E2;
+    position:relative;
+}
+.types {
+    border-bottom:0px;
+}
+.form-type {
+    float:left;
+}
+.resource {
+    width:85%;
+    height:40px;
+    line-height:40px;
+    margin-left:50px;
+}
+/*第三部分*/
+.update-third {
+    width:100%;
+    padding:10px;
+    height:80px;
+    background-color:white;
+    margin-top:20px;
+}
+.more {
+    margin-top:5px;
+    font-size:15px;
+    margin-left:10px;
+    height:30px;
+    width:17%;
+}
+.details {
+    font-size:17px;
+    padding: 0 10px;
+    height: 3em
+}
+/*按钮*/
+.form-submit {
+    margin-top:20px;
+    line-height:45px;
+    width:90%;
+    height:45px;
+    border-radius:5px;
+    background-color:#2EBAEE;
+    color:white;
+}

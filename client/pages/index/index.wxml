@@ -1,0 +1,114 @@
+<!--index.wxml-->
+
+<!--这是用户信息完善的页面-->
+<view class="container" style="display:{{index2}}">
+  <!--头部开始--> 
+  <view class="card-top" style='background:{{skinval =="color" ? skinvalue : "url("+skinvalue+")"}}'>
+    <view>
+      <image src="{{userDetail.photo}}" class="images"></image>
+    </view>
+    <view class="name">
+      <view>{{userDetail.username}}</view>
+      <view class="position">{{userDetail.position}}</view>
+    </view>
+    <view class="type">公司
+      <view class="nickname">{{userDetail.company}}</view>
+    </view>
+    <view class="type">电话
+      <block wx:if="{{true}}">
+        <view class="phone" id="{{userDetail.phone}}" bindtap="cphone">{{userDetail.phone}}</view>
+        <!-- <view>拨号</view> -->
+      </block>
+    </view>
+    <view class="type">手机
+      <view class="email">{{userDetail.tel}}</view>
+    </view>
+    <view class="type">QQ
+      <view class="email">{{userDetail.qq_id}}</view>
+    </view>
+    <view class="type">微信
+      <view class="email">{{userDetail.wxname}}</view>
+    </view>
+    <view class="type">地址
+      <view class="email">{{userDetail.address}}</view>
+    </view>
+  </view>
+  <view class='index-row2'>
+    <view bindtap="skinchange"><image class="in-1" src="../../image/mp/4.png"> 12</image></view>
+    <view>
+    <image class="src" src="../../image/mp/3.png"></image>
+    动态
+      <text class="character">:</text>{{userDetail.dynamic}}</view>      
+    <view>
+    <image class="src" src="../../image/mp/2.png"></image>
+    影响力
+      <text class="character">:</text>{{userDetail.impact}}</view>
+    <view>
+    <image class="src" src="../../image/mp/1.png"></image>
+    点赞
+      <text class="character">:</text>{{userDetail.like}}</view>
+    <view>
+    <image class="src" src="../../image/mp/0.png"></image>
+    收藏
+      <text class="character">:</text>{{userDetail.colle}}</view>
+  </view>
+  <view class="center">
+    <view class="centers" bindtap="resource1">
+      <image class="src" src="../../image/mp/5.png"></image>
+      <view class="space">名片码</view>
+    </view>
+    <view class="centers">
+      <image class="src" src="../../image/mp/6.png"></image>
+      <view class="space">分享好友</view>
+      <button class="share-button" open-type="share">
+      </button>
+    </view>
+    <view class="centers" bindtap="resource3">
+      <image class="src" src="../../image/mp/7.png"></image>
+      <view class="space">我的动态</view>
+    </view>
+    <view class="centers" bindtap="resource4">
+      <image class="src" src="../../image/mp/8.png"></image>
+      <view class="space">私人定制</view>
+    </view>
+    <view class="centers" bindtap="resource5">
+      <image class="src" src="../../image/mp/9.png"></image>
+      <view class="space">修改名片</view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="more">更多</view>
+    <view class="post" placeholder="{{userDetail.detailinfo}}">{{userDetail.detailinfo}}</view>
+  </view>
+  <!--<view><image src="src"></image>面对面扫名片</view>-->
+  <!--<navigator bindtap="ShareCard" class="button button-first">递名片</navigator>-->
+  <navigator url="../ucard/ucard" style='display:{{index3}}' class="button button-first">编辑名片</navigator>
+
+  <!--这是用户信息缺失的页面-->
+  <view class="container1" style="display:{{index1}}">
+    <!-- <image src="../../image/list.png" class="img"></image>  -->
+    <view class="font">你还没有名片哦,赶快来做一张吧</view>
+    <view class="curl" bindtap="curls">去做一张</view>
+  </view>
+
+
+  <view class="reminder">点击右上角,可以分享你的名片哦.</view>
+  <view class="reminder">再次使用:发现-小程序-搜索“投点名片”</view>
+  <image src="../../image/kefu.png" bindtap="lianxikefu" class="kefu"></image>
+  <text class="lianxi">联系客服</text>
+</view>
+
+<!-- 自定义弹框开始 -->
+<view class='cont_model'>
+  <view wx:if="{{showModel}}" class="model">
+    <view class="modelTitle">
+      获取微信授权信息
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息，请前往设置</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="agreeGetUser" lang="zh_CN">去设置</button>
+    </view>
+  </view>
+</view>
+  <view wx:if="{{showModel}}" class="mask"></view>
+  <!-- 自定义弹框结束 -->

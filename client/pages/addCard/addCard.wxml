@@ -1,0 +1,56 @@
+<!--pages/addCard/addCard.wxml-->
+<form bindsubmit="formSubmit">
+<view class="container">
+
+    <!--第一部分-->
+    <view class="update-top">
+        <!--<view wx:if="{{avatarUrl == null}}">
+            <image class="img" src="{{avatarUrl}}" bindtap="uploadImg"></image>
+        </view>-->
+        <!--<view wx:else>-->
+            <image class="img" src="{{userInfo.avatarUrl}}" bindtap="uploadImg"></image>
+        <!--</view>-->
+        <input type="text" placeholder="请输入你的姓名" name="username" class="username"/>
+        <input type="text" value="{{userInfo.nickName}}" name="wxname" class="username"/>    
+        
+        
+    </view>
+
+    <!--第二部分-->    
+    <view class="update-second">
+<view class="type">
+<text class="form-type">手机</text> 
+        <input type="text" name="phone" class="resource" bindinput="sendInfo" value="{{phone}}" maxlength="11" disabled="true" placeholder="获取绑定手机号" />
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="btn">获取手机号</button>
+        <!-- <button disabled="{{yanzhen}}" bindtap="btnValidation" class="btn">验证</button> -->
+</view>
+
+        <view class="type">
+            <text class="form-type">公司</text> 
+            <input type="text" name="company" placeholder="请输入公司名称" class="resource"/>
+        </view>
+        <view class="type">
+            <text class="form-type">职务</text> 
+            <input type="text" name="position" placeholder="请输入职务" class="resource"/>
+        </view>
+        <view class="type types">
+            <text class="form-type">邮箱</text> 
+            <input type="text" name="email" placeholder="邮箱格式123456@qq.com" class="resource"/>
+        </view>
+        <view class="type types">
+            <text class="form-type">分类</text> 
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="resource">
+              <view class="weui-input">{{array[index]}}</view>
+            </picker>
+        </view>
+    </view>
+
+    <!--第三部分-->
+    <view class="update-third">
+        <view class="more">介绍</view>
+        <textarea auto-focus="true" name="detailInfo" class="details" placeholder="请填写自我介绍" />
+    </view>
+    <button formType="submit" class="form-submit">创建</button>
+</view>
+</form>
+

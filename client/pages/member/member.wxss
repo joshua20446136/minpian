@@ -1,0 +1,102 @@
+.member-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /*padding: 50rpx 0; */
+  box-sizing: border-box;
+  background-color: #f76f9c;
+  color: #fff;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 320rpx;
+  width: 33%;
+  /* position: absolute;
+  z-index: 2;
+  top: 70rpx;
+  left: 311rpx; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 36rpx 0 24rpx;
+  border-radius: 50%;
+}
+
+.vpoints, .vbalance {
+  color: #ffd700;
+}
+
+.ct {
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+  justify-content: center;
+}
+
+.ct view {
+  padding: 2rpx 10rpx;
+  margin-right: 10rpx;
+  border-radius: 12rpx;
+  background-color: #fff;
+  color: #f76f9c;
+}
+
+.user_balance, .user_points, .userinfo {
+  width: 33%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+/*8方格  */
+
+.member_conbt {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+padding: -1px;
+  overflow: hidden;
+}
+
+.member_conbt .src {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.member_conbt .conbt {
+  width: 185rpx;
+  height: 160rpx;
+  border-left: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+  position: relative;
+}
+.member_conbt .conbt button{
+  position: absolute;
+  opacity: 0;
+  top:0;
+  left:0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.member_conbt view view {
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+/*ad  */
+.ad{margin-top:15rpx }
+.ad_title{font-size: 32rpx;font-weight: bold;line-height: 60rpx;border-bottom: 1px solid #ccc}
+.ad_title, .ad_content{text-align: center}
+.ad_content{margin: 6rpx}

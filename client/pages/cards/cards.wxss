@@ -1,0 +1,50 @@
+swiper{height: 350rpx}
+.slide-image,image{width:750rpx;height: 350rpx}
+.container{
+  background:#EFEFEF;
+
+}
+
+.buts4{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 8rpx;
+  justify-content:space-around;
+}
+.buts4o{
+  background:#FFFFFF;
+  height: 130rpx; 
+  width: 47%;
+  margin: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  position: relative;
+}
+
+.share-button{
+  opacity: 0; 
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top:0;
+  left: 0;
+
+}
+
+.buts4o .src{width:90rpx;height:90rpx;float: left;}
+
+/* 列表 */
+.common-list .list-item.has-img .content-title text {
+  line-height: 2
+}
+.common-list .list-item.has-img image.cover {
+  width: 145rpx;
+  height:145rpx;
+  border-radius: 10rpx;
+  left:35rpx;
+}

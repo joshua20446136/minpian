@@ -1,0 +1,2 @@
+.ordinary{margin-top:30rpx;display: flex;direction: row;justify-content:space-around;flex-wrap:wrap; align-content: flex-start }
+.ordinary view{width: 150rpx;height: 150rpx;border-radius: 20rpx;margin: 40rpx}

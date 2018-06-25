@@ -1,0 +1,17 @@
+<!--pages/replace/replace.wxml-->
+<form bindsubmit="formSubmit">
+    <view class="container1">
+        <view class="container">
+            <view class="first-top">
+                <view class="title">手机号</view>
+                <input type="text" name="phone" placeholder="请输入手机号" maxlength="11" bindinput="inputPhone" class="phone" />
+                <button disabled="{{yanzhen}}" bindtap="checkPhone" class="btn">验证</button>
+            </view>
+            <view class="second-top">
+                <view class="codes">验证码</view>
+                <input type="text" name="code" bindinput="inputCode" maxlength="4" class="code" placeholder="请输入短信验证码"/>
+            </view>
+        </view>
+        <button formType="submit" class="submits">确认</button>
+    </view>
+</form>

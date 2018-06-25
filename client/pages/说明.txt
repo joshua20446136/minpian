@@ -1,0 +1,10 @@
+addCard  添加名片 
+Card  百万曝光 
+contactUser  名片分享后的页面 
+family  家族 
+index  首页 
+member  会员 
+replace  添加名片 
+resource  添加名片 
+ucard   修改名片 
+addCard  添加名片 

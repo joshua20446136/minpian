@@ -1,0 +1,77 @@
+<view class="member-container">  
+ <view class='user_balance'>
+    <view>余额</view>
+    <view class='vbalance'>0.00</view>  
+    <view class='ct'><view>充值</view> <view>提现</view> </view>  
+  </view>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class='user_points'>
+    <view>积分</view>
+    <view class='vpoints'>0.00</view>  
+  </view>
+
+</view>
+<!--8方格  -->
+<view class='member_conbt'>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/wdhy.png"></image></view>
+    <view><text>我的会员</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/qdyj.png"></image></view>
+    <view><text>签到有奖</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/kfzx.png"></image></view>
+    <view><text>客服中心</text></view>
+    <button open-type="contact" />
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/wdjl.png"></image></view>
+    <view><text>我的奖励</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/zyhd.png"></image></view>
+    <view><text>资源互动</text></view>
+  </view>
+  <view class='conbt' bindtap='mpmycode'>
+    <view><image class="src" src="../../image/mp/ewm.png"></image></view>
+    <view><text>名片二维码</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/shdz.png"></image></view>
+    <view><text>收货地址</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/sdhz.png"></image></view>
+    <view><text>深度合作</text></view>
+  </view>
+    <view class='conbt'>
+    <view><image class="src" src="../../image/mp/xyk.png"></image></view>
+    <view><text>信用卡超市</text></view>
+  </view>
+  <view class='conbt' bindtap='mpmycode'>
+    <view><image class="src" src="../../image/mp/dk.png"></image></view>
+    <view><text>贷款超市</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/bx.png"></image></view>
+    <view><text>保险超市</text></view>
+  </view>
+  <view class='conbt'>
+    <view><image class="src" src="../../image/mp/jfsc.png"></image></view>
+    <view><text>积分商城</text></view>
+  </view>
+
+</view>
+
+<!--广告  -->
+<view class='ad'>
+<view class='ad_title'>广告精准投放</view>
+<view class='ad_content'>
+<image class="src" style='height:234rpx;width:272rpx' src="../../image/mp/jztf.png"></image>
+</view>
+</view>

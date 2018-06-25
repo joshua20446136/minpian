@@ -1,0 +1,21 @@
+swiper {
+  height: 350rpx;
+}
+
+.slide-image, image {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+.showerror {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mydytitle {
+  font-size: 12px;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+}

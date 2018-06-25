@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="container">
+        <view class="content-article-detail" style="display:{{display}}">
+            <view class="entry-title">
+                {{detail.title.rendered}}
+            </view>
+            <view class="entry-date">
+                <image src="../../images/calendar.png" style="height:24rpx;width:24rpx;"></image>
+                <text class="entry-date-text">{{detailDate}}</text>
+                <block wx:if="{{detail.category_name !=null}}">
+                    <image src="../../images/category.png" style="height:24rpx;width:24rpx;margin-left: 20rpx;"></image>
+                    <text class="entry-icon-text">{{detail.category_name}}</text>
+                </block>
+                <image src="../../images/comments.png" style="height:24rpx;width:24rpx;margin-left: 20rpx;"></image>
+                <text class="entry-icon-text">{{total_comments}}</text>
+                <image src="../../images/pageviews.png" style="height:24rpx;width:24rpx;margin-left: 20rpx;"></image>
+                <text class="entry-icon-text">{{detail.pageviews}}</text>
+                <image src="../../images/home-like.png" style="height:24rpx;width:24rpx;margin-left: 20rpx;"></image>
+                <text class="entry-icon-text">{{likeCount}}</text>
+
+            </view>
+            <view class="entry-summary">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+            </view>
+        </view>
+        
+    </view>
+</view>

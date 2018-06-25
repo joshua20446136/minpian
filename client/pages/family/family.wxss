@@ -1,0 +1,26 @@
+swiper{height: 350rpx}
+.slide-image,image{width:750rpx;height: 350rpx}
+
+.container{
+  background:#EFEFEF;
+
+}
+
+.buts4{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 8rpx;
+  justify-content:space-around;
+}
+.buts4o{
+  background:#FFFFFF;
+  height: 130rpx; 
+  width: 47%;
+  margin: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+.buts4o .src{width:90rpx;height:90rpx;float: left;}

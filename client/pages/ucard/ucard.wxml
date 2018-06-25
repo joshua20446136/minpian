@@ -1,0 +1,40 @@
+<!--pages/ucard/ucard.wxml-->
+<form bindsubmit="formSubmit">
+<view class="container">
+
+    <!--第一部分-->
+    <view class="update-top">
+        <image bindtap="ImgUpload" class="img" src="{{userInfo.avatarUrl}}"></image>
+        <input type="text" value="{{userDetail.username}}" name="username" class="username"/>
+        <input type="text" class="phone" maxlength="11" name="tel" value="{{userDetail.tel}}" />
+        <!-- <button bindtap="connect" class="btn">更换</button> -->
+    </view>
+
+    <!--第二部分-->    
+    <view class="update-second">
+        <view class="type">
+            <text class="form-type">公司</text> 
+            <input type="text" name="company" value="{{userDetail.company}}" focus="true" class="resource"/>
+        </view>
+        <view class="type">
+            <text class="form-type">职务</text> 
+            <input type="text" name="position" value="{{userDetail.position}}" class="resource"/>
+        </view>
+        <view class="type">
+            <text class="form-type">电话</text> 
+            <input type="text" name="phone" value="{{userDetail.phone}}" class="resource"/>
+        </view>
+        <view class="type types">
+            <text class="form-type">地址</text> 
+            <input type="text" name="address" value="{{userDetail.address}}" class="resource"/>
+        </view>
+    </view>
+
+    <!--第三部分-->
+    <view class="update-third">
+        <view class="more">更多</view>
+        <input type="text" class="details" name="detailInfo" value="{{userDetail.detailinfo}}"/>
+    </view>
+    <button formType="submit" class="form-submit">保存</button>
+</view>
+</form>
