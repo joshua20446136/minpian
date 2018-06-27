@@ -16,21 +16,21 @@
     </view>
     <view class="type">电话
       <block wx:if="{{true}}">
-        <view class="phone" id="{{userDetail.phone}}" bindtap="cphone">{{userDetail.phone}}</view>
+        <view class="phone" bindtap="cphone" id="{{userDetail.phone}}" >{{userDetail.phone}}</view>
         <!-- <view>拨号</view> -->
       </block>
     </view>
     <view class="type">手机
-      <view class="email">{{userDetail.tel}}</view>
+      <view class="email"  bindtap="cphone"  id="{{userDetail.tel}}">{{userDetail.tel}}</view>
     </view>
     <view class="type">QQ
       <view class="email">{{userDetail.qq_id}}</view>
     </view>
     <view class="type">微信
-      <view class="email">{{userDetail.wxname}}</view>
+      <view class="email" bindtap='wxcopy' id="{{userDetail.wxname}}">{{userDetail.wxname}}</view>
     </view>
     <view class="type">地址
-      <view class="email">{{userDetail.address}}</view>
+      <view class="email" bindtap='addressdh' id='{{userDetail.address}}'>{{userDetail.address}}</view>
     </view>
   </view>
   <view class='index-row2'>
