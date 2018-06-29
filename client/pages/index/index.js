@@ -212,6 +212,7 @@ Page({
     }
   },
   // 事件处理函数
+  // 名片码
   resource1: function () {
     var uid = wx.getStorageSync('uid')
     if(!uid){
@@ -258,23 +259,18 @@ Page({
       url: '../resource/resource?types=2&uid='+uid
     })
   },
+  // 我的动态
   resource3: function () {
     var uid = wx.getStorageSync('uid')
     wx.navigateTo({
       url: '../dynamic/dynamic?uid='+uid
     })
   },
+  // 私人定制
   resource4: function () {
-    wx.showModal({
-      showCancel: false,
-      icon: 'loading',
-      title: '开发中。',
-      duration: 2000
-    })
-    return false;
     var uid = wx.getStorageSync('uid')
     wx.navigateTo({
-      url: '../resource/resource?types=3&uid=' + uid
+      url: '../skin/privateorder'
     })
   },
   resource5: function () {
@@ -317,9 +313,19 @@ Page({
   },
   // 打电话
   cphone: function (event) {
-    // console.log(event)
+     console.log(event)
     wx.makePhoneCall({
       phoneNumber: event.target.id
     })
-  }
+  },
+  //复制微信名
+  wxcopy:function(e){
+    wx.setClipboardData({
+      data: e.target.id,
+    })
+  },
+  //地址导航
+  addressdh: function (e) {
+
+  },
 })

@@ -16,6 +16,7 @@
     "pages/detail/detail",
     "pages/mycolle/mycolle",
     "pages/skin/skin",
+    "pages/skin/privateorder",
     "pages/private/private"
   ],
   "window":{
