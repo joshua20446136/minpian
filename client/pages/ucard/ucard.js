@@ -3,7 +3,7 @@ var app = getApp()
 Page({
   data:{
     userInfo:{},
-    userDetail:{}
+    userDetail: { address: '定位你的位置'}
   },
   // 页面初始化
   onLoad:function(options){  
@@ -26,7 +26,7 @@ Page({
       success: function (a) {
         console.log(a)
         that.setData({
-          userDetail:a.data.userinfo
+           userDetail:a.data.userinfo
         })
       }
     })
@@ -43,8 +43,10 @@ Page({
         position:e.detail.value.position,
         tel: e.detail.value.tel,
         phone: e.detail.value.phone,
-        address: e.detail.value.address,
-        detailInfo:e.detail.value.detailInfo,
+        address: e.detail.value.address,        
+        latitude: that.data.userDetail['latitude'],
+        longitude: that.data.userDetail['longitude'],
+        detailInfo: e.detail.value.detailInfo,
         uid:uid
       },
       method:'POST',
@@ -73,6 +75,19 @@ Page({
   },
   onPullDownRefresh: function(){
     wx.stopPullDownRefresh()
+  },
+  // 获取地址信息
+  getchooseLocation:function(){
+    var that = this;
+    wx.chooseLocation({
+      success:function(res){
+        that.setData({
+          'userDetail.address':res.address,
+          'userDetail.latitude':res.latitude,
+          'userDetail.longitude':res.longitude,
+        })
+      }
+    })
   },
   
 })

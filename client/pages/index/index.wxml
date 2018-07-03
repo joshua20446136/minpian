@@ -30,7 +30,7 @@
       <view class="email" bindtap='wxcopy' id="{{userDetail.wxname}}">{{userDetail.wxname}}</view>
     </view>
     <view class="type">地址
-      <view class="email" bindtap='addressdh' id='{{userDetail.address}}'>{{userDetail.address}}</view>
+      <view class="email" bindtap='addressdh' id='{{userDetail.address}}' data-latitude='{{userDetail.latitude}}' data-longitude='{{userDetail.longitude}}'>{{userDetail.address}}</view>
     </view>
   </view>
   <view class='index-row2'>

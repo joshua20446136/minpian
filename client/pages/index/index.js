@@ -326,6 +326,11 @@ Page({
   },
   //地址导航
   addressdh: function (e) {
-
+    console.log('adddh',e);
+    wx.openLocation({
+      latitude: Number(e.currentTarget.dataset.latitude),
+      longitude: Number(e.currentTarget.dataset.longitude),
+      scale: 28
+    })
   },
 })
